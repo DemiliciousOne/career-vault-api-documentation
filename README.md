@@ -4,24 +4,28 @@ Career Vault's Jobs API documentation
 All requests to the API are authenticated by providing your API key. The API key should be provided as an HTTP header named Api-Token.
 > :warning: **Remember to keep your API key secret. Do not share it and take care not to expose it publicly in client-side code.
 
+## URL Parameters
 Parameter | Description
 ------------ | -------------
 page | A cursor for use in pagination. Returns the n-th chunk of perPage objects.
-perPage | Return up to this number of objects per response. Must be an integer between 1 and 500. Defaults to 100.
+perPage | Return up to this number of objects per response. Must be an integer between 1 and 500 (otherwise, it will default to 100). Defaults to 100.
 
 
-JSON response
+## GET: List Jobs
+### HTTP Request
+
+```GET https://careervault.io/api/{id}```
+
+### JSON Response
 ```
 {
   "meta": {
     "page": 1,
-    "perPage": 25,
-    "pageCount": 666,
-    "totalNumberOfPages": 666,
-    "totalCount": 16634,
-    "uniqueCompaniesCount": 1604,
-    "totalNumberOfJobs": 16634,
-    "newJobsCount": 1633
+    "perPage": 100,
+    "pageCount": 112,
+    "uniqueCompaniesCount": 1725,
+    "totalNumberOfJobs": 8392,
+    "newJobsCount": 0
   },
   "jobs": [
     {
