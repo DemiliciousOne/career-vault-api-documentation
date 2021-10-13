@@ -1,8 +1,5 @@
 # career-vault-api-documentation
 Career Vault's Jobs API documentation
-## Authentication
-All requests to the API are authenticated by providing your API key. The API key should be provided as an HTTP header named Api-Token.
-> :warning: **Remember to keep your API key secret. Do not share it and take care not to expose it publicly in client-side code.
 
 ## URL Parameters
 Parameter | Description
